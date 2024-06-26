@@ -1,4 +1,4 @@
-# Portable Raspberry Pi 3B+ (v1.2) Retropie Config Files:
+# Portable Raspberry Pi 3B+ (v1.2) Retropie. Notes on Config Files:
 
 - `config.txt` has the following file location: `/boot/config.txt`
     - Used for Overclocking, Turbo Mode and Over Voltage.
