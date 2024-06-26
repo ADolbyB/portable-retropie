@@ -2,8 +2,11 @@
 
 Here I place my working config files for my RetroPie.
 
-My RetroPie is a work in progress with many parts I already had sitting around.
-I will share details of this easy build here.
+My RetroPie is a work in progress with many parts I already had sitting around. I will share details of this easy build here.
+
+This unit is meant to be fully portable since it only depends on a single USB-A connection. The 10.1" screen is powered directly by the 5V GPIO of the Raspberry Pi.
+
+Note that this is a work in progress. When I get a 3D printer, I would like to create a better stand/case with a handle for easy travel. This screen has a headphone jack for audio out, so an audio amp and speakers can be added.
 
 ## Features:
 
@@ -22,8 +25,6 @@ I will share details of this easy build here.
 - 1x [Wireless Keyboard](https://www.amazon.com/dp/B098WTHSYR)
 
 ## Build Pics:
-
-- Note that this is a work in progress. When I get a 3D printer, I would like to create a better stand/case with a handle for easy travel.
 
 <div align="center">
 
