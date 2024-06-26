@@ -21,7 +21,7 @@ Note that this is a work in progress. When I get a 3D printer, I would like to c
 - 1x RPi 3B+ Case (Choose One you like).
 - 1x [HD 10.1" TouchScreen](https://www.amazon.com/dp/B0CJNKFVPY?th=1)
     - This kit comes with a new power supply and a bunch of cables for the power and touchscreen.
-    - This screen can be powered directly by the RPi 5V & Ground GPIO, thereby only needing
+    - This screen can be powered directly by the RPi 5V & Ground GPIO, thereby only needing a single USB-A connection.
 - 1x [Wireless Keyboard](https://www.amazon.com/dp/B098WTHSYR)
 
 ## Build Pics:
