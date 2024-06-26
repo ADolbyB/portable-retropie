@@ -9,6 +9,7 @@
         - [RPi Docs: `raspi-config` settings](https://www.raspberrypi.com/documentation/computers/configuration.html)
         - [RPi Forum: Undervoltage on the Pi3](https://retropie.org.uk/forum/topic/1006/under-voltage-on-the-pi3/5)
         - [Raspberry Pi Memory Split](https://retropie.org.uk/docs/Memory-Split/)
+        - [Increasing the Swap File on RPi](https://pimylifeup.com/raspberry-pi-swap-file/)
 - `es_systems.cfg` has the file location: `/etc/emulationstation/es_systems.cfg`
     - Used for displaying the names and logos of each game console in Emulation Station.
     - This file is modified for the US with the Sega Genesis logo, and is located at
