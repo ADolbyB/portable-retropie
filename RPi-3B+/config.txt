@@ -1,0 +1,92 @@
+#################################################################################
+## J. Brigida: RPi 3B+ (3B v1.2) Overclocking for RetroPie Usage.
+## Modifications based on some observations and documentation here:
+## File location on Debian 10 Buster Release: /boot/config.txt
+## https://www.raspberrypi.com/documentation/computers/processors.html#bcm2837b0
+## https://forums.raspberrypi.com/viewtopic.php?t=235753
+## https://retropie.org.uk/forum/topic/21138/overclocking-the-pi3b-gpu-results/2
+## https://www.raspberrypi.com/documentation/computers/configuration.html
+## https://retropie.org.uk/forum/topic/1006/under-voltage-on-the-pi3/5
+##################################################################################
+
+# For more options and information see
+# http://rpf.io/configtxt
+# Some settings may impact device functionality. See link above for details
+
+# uncomment if you get no picture on HDMI for a default "safe" mode
+#hdmi_safe=1
+
+# uncomment this if your display has a black border of unused pixels visible
+# and your display can output without overscan
+# disable_overscan=0
+
+# uncomment the following to adjust overscan. Use positive numbers if console
+# goes off screen, and negative if there is too much border
+overscan_left=-30
+overscan_right=-31      ## Corrects the screen position relative to the border.
+overscan_top=-31
+overscan_bottom=-30
+
+# uncomment to force a console size. By default it will be display's size minus
+# overscan.
+#framebuffer_width=1280
+#framebuffer_height=720
+
+# uncomment if hdmi display is not detected and composite is being output
+#hdmi_force_hotplug=1
+
+# Uncomment to force a specific HDMI mode (this will force VGA)
+#hdmi_group=1
+#hdmi_mode=1
+
+# Uncomment to force a HDMI mode rather than DVI. This can make audio work in
+# DMT (computer monitor) modes
+#hdmi_drive=2
+
+# Uncomment to increase signal to HDMI, if you have interference, blanking, or
+# no display
+#config_hdmi_boost=4
+
+# Uncomment for composite PAL
+#sdtv_mode=2
+
+# Uncomment to overclock the arm. 700 MHz is the default.
+over_voltage=2                  ## JB: Force voltage values higher.
+force_turbo=1                   ## JB: Force Turbo CPU Mode.
+avoid_warnings=2                ## Allow Turbo Mode with low-voltage present & disable undervoltage warnings.
+#arm_freq=800
+#core_freq=500                  ## JB: Video IV Core Freq.
+#gpu_freq=500                   ## JB: GPU Core Freq.
+#sdram_freq=500 
+
+# Uncomment some or all of these to enable the optional hardware interfaces
+#dtparam=i2c_arm=on
+#dtparam=i2s=on
+#dtparam=spi=on
+dtparam=sd_overclock=100        ## NOTE: For Class 10 SD Card: Samsung PRO Endurance 256GB
+
+# Uncomment this to enable infrared communication.
+#dtoverlay=gpio-ir,gpio_pin=17
+#dtoverlay=gpio-ir-tx,gpio_pin=18
+
+# Additional overlays and parameters are documented /boot/overlays/README
+
+# Enable audio (loads snd_bcm2835)
+dtparam=audio=on
+
+[pi4]
+# Enable DRM VC4 V3D driver on top of the dispmanx display stack
+dtoverlay=vc4-fkms-v3d
+max_framebuffers=2
+
+[all]
+#dtoverlay=vc4-fkms-v3d
+#gpu_mem_256=128                ## NOTE: Stock Settings
+#gpu_mem_512=256
+#gpu_mem_1024=256
+
+gpu_mem_256=256                 ## JB: Upgraded settings
+gpu_mem_512=512
+gpu_mem_1024=512
+
+overscan_scale=1
