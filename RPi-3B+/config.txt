@@ -1,7 +1,6 @@
 #################################################################################
 ## J. Brigida: RPi 3B+ (3B v1.2) Overclocking for RetroPie Usage.
 ## Modifications based on some observations and documentation here:
-## File location on Debian 10 Buster Release: /boot/config.txt
 ## https://www.raspberrypi.com/documentation/computers/processors.html#bcm2837b0
 ## https://forums.raspberrypi.com/viewtopic.php?t=235753
 ## https://retropie.org.uk/forum/topic/21138/overclocking-the-pi3b-gpu-results/2
@@ -18,14 +17,14 @@
 
 # uncomment this if your display has a black border of unused pixels visible
 # and your display can output without overscan
-# disable_overscan=0
+disable_overscan=1      ## Remove black border around screen.
 
 # uncomment the following to adjust overscan. Use positive numbers if console
 # goes off screen, and negative if there is too much border
-overscan_left=-30
-overscan_right=-31      ## Corrects the screen position relative to the border.
-overscan_top=-31
-overscan_bottom=-30
+#overscan_left=-32
+#overscan_right=-32
+#overscan_top=-32
+#overscan_bottom=-32
 
 # uncomment to force a console size. By default it will be display's size minus
 # overscan.
@@ -51,13 +50,14 @@ overscan_bottom=-30
 #sdtv_mode=2
 
 # Uncomment to overclock the arm. 700 MHz is the default.
-over_voltage=2                  ## JB: Force voltage values higher.
-force_turbo=1                   ## JB: Force Turbo CPU Mode.
-avoid_warnings=2                ## Allow Turbo Mode with low-voltage present & disable undervoltage warnings.
 #arm_freq=800
 #core_freq=500                  ## JB: Video IV Core Freq.
 #gpu_freq=500                   ## JB: GPU Core Freq.
-#sdram_freq=500 
+#sdram_freq=500                 ## Not sure what 
+over_voltage=3                  ## JB: Force voltage values higher.
+force_turbo=1                   ## JB: Force Turbo CPU Mode.
+avoid_warnings=2                ## Allow Turbo Mode with low-voltage present & disable undervoltage warnings.
+
 
 # Uncomment some or all of these to enable the optional hardware interfaces
 #dtparam=i2c_arm=on
@@ -89,4 +89,4 @@ gpu_mem_256=256                 ## JB: Upgraded settings
 gpu_mem_512=512
 gpu_mem_1024=512
 
-overscan_scale=1
+#overscan_scale=1

@@ -14,6 +14,7 @@ Note that this is a work in progress. When I get a 3D printer, I would like to c
 - Raspberry Pi 3B+ running the Buster release of Retropie.
 - Wireless controllers and keyboard.
 - Fully portable: needs only a USB-A power connection.
+- Add whatever themes to your taste.
 
 ## Components:
 
